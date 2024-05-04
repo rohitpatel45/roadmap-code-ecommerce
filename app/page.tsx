@@ -1,3 +1,4 @@
+import MostChoiceProduct from "@/components/MostChoiceProduct";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 
@@ -18,13 +19,15 @@ export default function Home() {
           </div>
           <div className=" flex-1">
             <img
-              src="https://images.unsplash.com/photo-1686715692509-8cb69d40d081?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyM3x8fGVufDB8fHx8fA%3D%3D"
+              src="/Shopping-Image.jpg"
               alt=""
               className="h-96 w-full rounded-sm"
             />
           </div>
         </div>
+        <MostChoiceProduct />
       </div>
+     
     </main>
   );
 }
