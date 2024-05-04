@@ -1,3 +1,4 @@
+import { Button } from "./ui/button";
 
 const ProductCard = ({ product}) => {
     return (
@@ -8,7 +9,7 @@ const ProductCard = ({ product}) => {
           <p className="mt-2 text-gray-600">{product.description}</p>
           <div className="mt-4 flex items-center justify-between">
             <span className="text-gray-900">${product.price}</span>
-            <button className="px-3 py-1 bg-gray-800 text-white text-xs font-semibold rounded uppercase hover:bg-gray-700 focus:bg-gray-700 focus:outline-none">Add to Cart</button>
+            <Button className="px-3 py-1 bg-gray-800 text-white text-xs font-semibold rounded uppercase hover:bg-gray-700 focus:bg-gray-700 focus:outline-none">Add to Cart</Button>
           </div>
         </div>
       </div>
