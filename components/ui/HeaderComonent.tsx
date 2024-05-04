@@ -8,12 +8,16 @@ import { usePathname } from "next/navigation";
 function HeaderComonent() {
     const pathname = usePathname()
   return (
-    <div>
-      <div className="flex items-center justify-between">
+    <div className="bg-green-300">
+      <div className="flex items-center justify-between max-w-6xl mx-auto">
         {/* Logo */}
         <Image src="/School_Logo.png" alt="" width={50} height={50} />
 
-        {/* <div>Menu</div> */}
+        <div className="lg:flex space-x-4 p-2 hidden ">
+        <Link href="/" className={`${pathname === '/' ? "active_menu_option" : "menu_option_style"}`}>Home</Link>
+        <Link href="/product" className={`${pathname === '/product' ? "active_menu_option" : "menu_option_style"}`}>product</Link>
+        <Link href="/about" className={`${pathname === '/about' ? "active_menu_option" : "menu_option_style"}`}>About</Link>
+      </div>
         {/* Login Button */}
         <div className="flex items-center space-x-2 ">
           <ShoppingCartIcon className="h-6 w-6 cursor-pointer" />
@@ -22,7 +26,7 @@ function HeaderComonent() {
       </div>
 
       {/* Mobile View Menu */}
-      <div className="flex space-x-4 p-2">
+      <div className="flex space-x-4 p-2 lg:hidden">
         <Link href="/" className={`${pathname === '/' ? "active_menu_option" : "menu_option_style"}`}>Home</Link>
         <Link href="/product" className={`${pathname === '/product' ? "active_menu_option" : "menu_option_style"}`}>product</Link>
         <Link href="/about" className={`${pathname === '/about' ? "active_menu_option" : "menu_option_style"}`}>About</Link>
