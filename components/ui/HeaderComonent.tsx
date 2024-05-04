@@ -26,7 +26,7 @@ function HeaderComonent() {
       </div>
 
       {/* Mobile View Menu */}
-      <div className="flex space-x-4 p-2 lg:hidden">
+      <div className="flex space-x-3 p-1 lg:hidden">
         <Link href="/" className={`${pathname === '/' ? "active_menu_option" : "menu_option_style"}`}>Home</Link>
         <Link href="/product" className={`${pathname === '/product' ? "active_menu_option" : "menu_option_style"}`}>product</Link>
         <Link href="/about" className={`${pathname === '/about' ? "active_menu_option" : "menu_option_style"}`}>About</Link>
