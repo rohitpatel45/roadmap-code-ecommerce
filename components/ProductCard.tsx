@@ -1,6 +1,18 @@
-import { Button } from "./ui/button";
+// components/ProductCard.tsx
 
-const ProductCard = ({ product}) => {
+interface Product {
+    id: number;
+    name: string;
+    description: string;
+    image: string;
+    price: number;
+  }
+  
+  interface ProductCardProps {
+    product: Product;
+  }
+  
+  const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
     return (
       <div className="max-w-xs bg-white shadow-lg rounded-lg overflow-hidden">
         <img className="w-full h-48 object-cover object-center" src={product.image} alt={product.name} />
@@ -9,7 +21,7 @@ const ProductCard = ({ product}) => {
           <p className="mt-2 text-gray-600">{product.description}</p>
           <div className="mt-4 flex items-center justify-between">
             <span className="text-gray-900">${product.price}</span>
-            <Button className="px-3 py-1 bg-gray-800 text-white text-xs font-semibold rounded uppercase hover:bg-gray-700 focus:bg-gray-700 focus:outline-none">Add to Cart</Button>
+            <button className="px-3 py-1 bg-gray-800 text-white text-xs font-semibold rounded uppercase hover:bg-gray-700 focus:bg-gray-700 focus:outline-none">Add to Cart</button>
           </div>
         </div>
       </div>
