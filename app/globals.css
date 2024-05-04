@@ -2,6 +2,17 @@
   @tailwind components;
   @tailwind utilities;
 
+  @layer components{
+    .menu_option_style{
+      @apply text-lg font-semibold text-gray-700/90
+    }
+
+    .active_menu_option{
+      @apply text-lg font-semibold text-gray-700/90 border-b-[6px] border-black text-black 
+    }
+  }
+
+
   @layer base {
     :root {
       --background: 0 0% 100%;
