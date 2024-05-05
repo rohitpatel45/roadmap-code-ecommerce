@@ -34,7 +34,7 @@ function CustomerReviewsComponent() {
 
       <div className="p-1 gap-2 bg-red-400/50 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
         {reviews.map((review) => (
-          <div className="gap-10">
+          <div className="gap-10" key={review.id}>
             <img src={review.img} alt="" className="w-full rounded-md" />
           </div>
         ))}
