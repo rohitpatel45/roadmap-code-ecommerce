@@ -1,3 +1,4 @@
+import CustomerReviewsComponent from "@/components/CustomerReviewsComponent";
 import MostChoiceProduct from "@/components/MostChoiceProduct";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
@@ -26,6 +27,7 @@ export default function Home() {
           </div>
         </div>
         <MostChoiceProduct />
+        <CustomerReviewsComponent />
       </div>
      
     </main>

@@ -32,7 +32,7 @@ function MostChoiceProduct() {
         All the recent best liked product
       </h2>
       
-      <div className="container mx-auto grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-8">
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-2">
       {products.map(product => (
         <ProductCard key={product.id} product={product} />
       ))}
